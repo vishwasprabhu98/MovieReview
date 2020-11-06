@@ -10,7 +10,9 @@ export class MovielistService {
   movielist: Movie[] = JSON.parse(localStorage.getItem('movies'));
 
   constructor() {
-    // localStorage.setItem('movies', JSON.stringify(MOVIE_LIST));
+    if(!localStorage.getItem('movies')){
+      localStorage.setItem('movies', JSON.stringify(MOVIE_LIST));
+    }
   }
 
   getMovieList(): Movie[] {

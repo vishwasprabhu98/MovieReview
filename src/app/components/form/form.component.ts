@@ -15,7 +15,8 @@ export class FormComponent implements OnInit {
     year: null,
     image: '',
     rating: 3,
-    link: ''
+    link: '',
+    description: ''
   }
 
   constructor(private movielistService: MovielistService) { }

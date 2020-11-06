@@ -5,4 +5,5 @@ export interface Movie {
     image: string;
     rating: number;
     link: string;
+    description: string;
 }
