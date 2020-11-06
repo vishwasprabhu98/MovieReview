@@ -1,0 +1,12 @@
+<div class="containr">
+  <div class="movie" *ngFor="let movie of movielist">
+    <a routerLink="/movies/{{movie.id}}">
+      <img [src]="movie.image" alt="sorry">
+      <div class="details">
+        <p class="title">{{movie.title}}</p>
+        <p class="year">{{movie.year}}</p>
+        <p class="stars">{{movie.rating}} <span class="fa fa-star"></span></p>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.nav-bar {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3131313a;
+    padding: 0px 10%;
+    cursor: pointer;
+
+    .logo {
+        font-size: 1.5rem;
+        outline: none;
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+    .nav-link {
+        font-size: 1.1rem;
+        outline: none;
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+
+}
