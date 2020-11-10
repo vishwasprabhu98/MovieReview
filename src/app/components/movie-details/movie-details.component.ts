@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { MovielistService } from 'src/app/services/movielist.service';
-import { Movie } from '../movies/movie.interface';
+import { Movie } from '../../interfaces/movie.interface';
 
 @Component({
   selector: 'app-movie-details',
@@ -20,8 +20,10 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let id: number = +this.activatedRoute.snapshot.params.id;
-    this.movie = this.movielistService.getMovie(id);
-    this.url = this._sanitizer.bypassSecurityTrustResourceUrl(this.movie.link);
+    let id: string = this.activatedRoute.snapshot.params.id;
+    this.movielistService.getMovie(id).subscribe((res) => {
+      this.movie = res
+    });
+  // this.url = this._sanitizer.bypassSecurityTrustResourceUrl(this.movie.link);
   }
 }

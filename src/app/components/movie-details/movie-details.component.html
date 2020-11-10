@@ -1,9 +1,10 @@
 <div class="movie-detail-container">
   <div class="iframe">
-    <iframe width="100%" height="100%" [src]="url"></iframe>
+    <!-- <iframe width="100%" height="100%" [src]="url"></iframe> -->
+    <img [src]="movie.Poster" alt="">
   </div>
-  <p class="title">{{movie.title}}</p>
-  <p class="year">{{movie.year}}</p> 
-  <p class="rating">{{movie.rating}} <span class="fa fa-star"></span></p>
-  <p class="description">{{movie.description}}</p>
+  <p class="title">{{movie.Title}}</p>
+  <p class="year">{{movie.Year}}</p> 
+  <p class="rating">{{movie.imdbRating}} <span class="fa fa-star"></span></p>
+  <p class="description">{{movie.Plot}}</p>
 </div>

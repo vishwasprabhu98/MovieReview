@@ -1,4 +1,8 @@
 <div class="nav-bar">
     <div class="logo" routerLink = "/movies"> Movies </div>
+    <div>
+        <input [(ngModel)]="search" type="text">
+        <button (click)="getMovie()" routerLink="/movies">Submit</button>
+    </div>
     <div class="nav-link" routerLink = "/form"> Add Review </div>
 </div>
