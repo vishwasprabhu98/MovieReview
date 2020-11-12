@@ -8,6 +8,8 @@ import { FormComponent } from './components/form/form.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { ShortenPipe } from './shorten.pipe';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     FormComponent,
     HeaderComponent,
     MoviesComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    ShortenPipe,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

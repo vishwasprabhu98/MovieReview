@@ -1,0 +1,14 @@
+<div class="containr">
+    <div class="movie" *ngFor="let movie of favList">
+      <a routerLink="/movies/{{movie.imdbID}}">
+        <img [src]="movie.Poster" alt="sorry">
+        <div class="details">
+          <p class="title">{{movie.Title | shorten:10}}</p>
+          <p class="year">{{movie.Year | shorten:4}}</p>
+          <p class="stars">{{movie.rating }} <span class="fa fa-star"></span></p>
+          
+        </div>
+      </a>
+      <button (click) = "remove(movie.imdbID)">Remove</button>
+    </div>
+  </div>

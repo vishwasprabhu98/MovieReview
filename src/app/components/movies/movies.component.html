@@ -5,10 +5,16 @@
     <a routerLink="/movies/{{movie.imdbID}}">
       <img [src]="movie.Poster" alt="sorry">
       <div class="details">
-        <p class="title">{{movie.Title}}</p>
-        <p class="year">{{movie.Year}}</p>
-        <p class="stars">{{movie.rating}} <span class="fa fa-star"></span></p>
+        <p class="title">{{movie.Title | shorten:10}}</p>
+        <p class="year">{{movie.Year | shorten:4}}</p>
+        <p class="stars">{{movie.rating }} <span class="fa fa-star"></span></p>
+        
       </div>
     </a>
+    <button (click) = "add(movie)" [disabled] = 'include(movie.imdbID)'>ADD</button>
   </div>
 </div>
+
+<hr>
+
+<app-wishlist [favList] = "favList" (newItemEvent)="remove($event)"></app-wishlist>

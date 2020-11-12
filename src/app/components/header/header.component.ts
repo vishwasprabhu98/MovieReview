@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
   }
 
   getMovie() {
-    this.movieService.changeMessage(this.search);
+    let searchString = this.search;
+    this.movieService.changeMessage(searchString);
+    this.search = '';
   }
 }
